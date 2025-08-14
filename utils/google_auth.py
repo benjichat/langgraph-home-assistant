@@ -27,7 +27,14 @@ def load_auth_client():
     """
     # Load client info from the credentials file.
     with open(CREDENTIALS_PATH) as f:
-        client_info = json.load(f)['web']  # Adjust the key if needed.
+        creds_data = json.load(f)
+        # Handle both 'web' and 'installed' app types
+        if 'web' in creds_data:
+            client_info = creds_data['web']
+        elif 'installed' in creds_data:
+            client_info = creds_data['installed']
+        else:
+            raise ValueError("Credentials file must contain either 'web' or 'installed' key")
 
     # Load token info.
     with open(TOKEN_PATH) as f:

@@ -30,7 +30,7 @@ rprint("------- PASTE INTO https://mermaid.live/ -------")
 
 ### For running via terminal, comment out if running via LangGraph Studio or API ###
 input_data = {
-    "messages": [("user", "fetch all contacts")]
+    "messages": [("user", "fetch all events from the personal calendar tomorrow")]
  }
  
 for s in graph.stream(input_data, subgraphs=True):

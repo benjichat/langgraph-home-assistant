@@ -7,7 +7,7 @@ This directory contains utility scripts to help set up and manage Google API aut
 ### 1. `get_token.py`
 Handles Google OAuth2 authentication and token management for accessing Google APIs (Calendar, Gmail, Sheets).
 
-### 2. `check_gmail_labels.py`
+### 2. `handle_gmail_labels.py`
 Creates and manages custom Gmail labels needed by the home assistant for email categorization.
 
 ## Prerequisites
@@ -157,8 +157,8 @@ The scripts request access to the following Google API scopes:
 helper_scripts/
 ├── README.md                 # This file
 ├── get_token.py             # OAuth2 token management
-├── check_gmail_labels.py    # Gmail label creation
-└── gmail_labels.json        # Generated label mappings (created after running check_gmail_labels.py)
+├── handle_gmail_labels.py    # Gmail label creation
+└── gmail_labels.json        # Generated label mappings (created after running handle_gmail_labels.py)
 
 google_credentials/
 ├── credentials.json         # Your OAuth2 credentials (DO NOT commit)
